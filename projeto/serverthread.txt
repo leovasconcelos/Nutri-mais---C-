@@ -1,0 +1,38 @@
+package Server;
+
+import Controller.ProdutoDAO;
+import Controller.UsuarioDAO;
+import Model.Produto;
+import Model.ProdutoDados;
+import Model.Usuario;
+import java.net.*;
+import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class MultiServerThread extends Thread {
+
+    private Socket socket = null;
+
+    public MultiServerThread(Socket socket) {
+        super("MultiServerThread");
+        this.socket = socket;
+    }
+
+    @Override
+    public void run() {
+
+        try {
+            DataOutputStream outFromServer = new DataOutputStream(socket.getOutputStream());
+            DataInputStream inFromClient = new DataInputStream(socket.getInputStream());
+
+            inFromClient.close();
+            outFromServer.close();
+            socket.close();
+        } catch (IOException e) {
+            System.err.println("Erro: " + e.getMessage());
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(MultiServerThread.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+}

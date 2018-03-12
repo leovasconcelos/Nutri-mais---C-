@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="64f32da8-d884-4534-8a53-38b6816c543b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     anamnese.`id_ana` AS anamnese_id_ana,
+     anamnese.`motivo` AS anamnese_motivo,
+     anamnese.`tempoSentada` AS anamnese_tempoSentada,
+     anamnese.`antecendentesCirurgicos` AS anamnese_antecendentesCirurgicos,
+     anamnese.`tratamentoEstetico` AS anamnese_tratamentoEstetico,
+     anamnese.`antecedentesAlergicos` AS anamnese_antecedentesAlergicos,
+     anamnese.`funcionamentoIntestinalReg` AS anamnese_funcionamentoIntestinalReg,
+     anamnese.`atividadeFisica` AS anamnese_atividadeFisica,
+     anamnese.`fumante` AS anamnese_fumante,
+     anamnese.`alimentacaoBalanceada` AS anamnese_alimentacaoBalanceada,
+     anamnese.`ingestaoLiquidos` AS anamnese_ingestaoLiquidos,
+     anamnese.`gestante` AS anamnese_gestante,
+     anamnese.`filhos` AS anamnese_filhos,
+     anamnese.`problemaOrtopedico` AS anamnese_problemaOrtopedico,
+     anamnese.`tratamentoMedico` AS anamnese_tratamentoMedico,
+     anamnese.`acidosPele` AS anamnese_acidosPele,
+     anamnese.`tratamentoOrtomolecular` AS anamnese_tratamentoOrtomolecular,
+     anamnese.`marcoPasso` AS anamnese_marcoPasso,
+     anamnese.`metaisCorpo` AS anamnese_metaisCorpo,
+     anamnese.`antecedentesOncologicos` AS anamnese_antecedentesOncologicos,
+     anamnese.`cicloMenstrual` AS anamnese_cicloMenstrual,
+     anamnese.`metodoAnticoncepcional` AS anamnese_metodoAnticoncepcional,
+     anamnese.`varizes` AS anamnese_varizes,
+     anamnese.`lesoes` AS anamnese_lesoes,
+     anamnese.`hipertensao` AS anamnese_hipertensao,
+     anamnese.`hipotensao` AS anamnese_hipotensao,
+     anamnese.`epilepsia` AS anamnese_epilepsia,
+     anamnese.`diabetes` AS anamnese_diabetes,
+     anamnese.`observacoes` AS anamnese_observacoes,
+     anamnese.`paciente` AS anamnese_paciente,
+     paciente.`id_paciente` AS paciente_id_paciente,
+     paciente.`endereco` AS paciente_endereco,
+     paciente.`bairro` AS paciente_bairro,
+     paciente.`cidade` AS paciente_cidade,
+     paciente.`cep` AS paciente_cep,
+     paciente.`profissao` AS paciente_profissao,
+     paciente.`etnia` AS paciente_etnia,
+     paciente.`estadocivil` AS paciente_estadocivil,
+     paciente.`indicacao` AS paciente_indicacao,
+     paciente.`convMedico` AS paciente_convMedico,
+     paciente.`cart` AS paciente_cart,
+     paciente.`hospital` AS paciente_hospital,
+     paciente.`medico` AS paciente_medico,
+     paciente.`nome` AS paciente_nome,
+     paciente.`telefone` AS paciente_telefone,
+     paciente.`email` AS paciente_email,
+     paciente.`dataDeNascimento` AS paciente_dataDeNascimento,
+     paciente.`sexo` AS paciente_sexo,
+     paciente.`motivo` AS paciente_motivo
+FROM
+     `paciente` paciente INNER JOIN `anamnese` anamnese ON paciente.`id_paciente` = anamnese.`paciente`]]>
+	</queryString>
+	<field name="anamnese_id_ana" class="java.lang.Integer"/>
+	<field name="anamnese_motivo" class="java.lang.String"/>
+	<field name="anamnese_tempoSentada" class="java.lang.String"/>
+	<field name="anamnese_antecendentesCirurgicos" class="java.lang.String"/>
+	<field name="anamnese_tratamentoEstetico" class="java.lang.String"/>
+	<field name="anamnese_antecedentesAlergicos" class="java.lang.String"/>
+	<field name="anamnese_funcionamentoIntestinalReg" class="java.lang.String"/>
+	<field name="anamnese_atividadeFisica" class="java.lang.String"/>
+	<field name="anamnese_fumante" class="java.lang.String"/>
+	<field name="anamnese_alimentacaoBalanceada" class="java.lang.String"/>
+	<field name="anamnese_ingestaoLiquidos" class="java.lang.String"/>
+	<field name="anamnese_gestante" class="java.lang.Boolean"/>
+	<field name="anamnese_filhos" class="java.lang.Integer"/>
+	<field name="anamnese_problemaOrtopedico" class="java.lang.String"/>
+	<field name="anamnese_tratamentoMedico" class="java.lang.String"/>
+	<field name="anamnese_acidosPele" class="java.lang.String"/>
+	<field name="anamnese_tratamentoOrtomolecular" class="java.lang.String"/>
+	<field name="anamnese_marcoPasso" class="java.lang.String"/>
+	<field name="anamnese_metaisCorpo" class="java.lang.String"/>
+	<field name="anamnese_antecedentesOncologicos" class="java.lang.String"/>
+	<field name="anamnese_cicloMenstrual" class="java.lang.String"/>
+	<field name="anamnese_metodoAnticoncepcional" class="java.lang.String"/>
+	<field name="anamnese_varizes" class="java.lang.String"/>
+	<field name="anamnese_lesoes" class="java.lang.String"/>
+	<field name="anamnese_hipertensao" class="java.lang.Boolean"/>
+	<field name="anamnese_hipotensao" class="java.lang.Boolean"/>
+	<field name="anamnese_epilepsia" class="java.lang.Boolean"/>
+	<field name="anamnese_diabetes" class="java.lang.Boolean"/>
+	<field name="anamnese_observacoes" class="java.lang.String"/>
+	<field name="anamnese_paciente" class="java.lang.Integer"/>
+	<field name="paciente_id_paciente" class="java.lang.Integer"/>
+	<field name="paciente_endereco" class="java.lang.String"/>
+	<field name="paciente_bairro" class="java.lang.String"/>
+	<field name="paciente_cidade" class="java.lang.String"/>
+	<field name="paciente_cep" class="java.lang.String"/>
+	<field name="paciente_profissao" class="java.lang.String"/>
+	<field name="paciente_etnia" class="java.lang.String"/>
+	<field name="paciente_estadocivil" class="java.lang.String"/>
+	<field name="paciente_indicacao" class="java.lang.String"/>
+	<field name="paciente_convMedico" class="java.lang.String"/>
+	<field name="paciente_cart" class="java.lang.String"/>
+	<field name="paciente_hospital" class="java.lang.String"/>
+	<field name="paciente_medico" class="java.lang.String"/>
+	<field name="paciente_nome" class="java.lang.String"/>
+	<field name="paciente_telefone" class="java.lang.String"/>
+	<field name="paciente_email" class="java.lang.String"/>
+	<field name="paciente_dataDeNascimento" class="java.lang.Integer"/>
+	<field name="paciente_sexo" class="java.lang.String"/>
+	<field name="paciente_motivo" class="java.lang.String"/>
+	<group name="anamnese_id_ana">
+		<groupExpression><![CDATA[$F{anamnese_id_ana}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<textField>
+					<reportElement style="SubTitle" x="47" y="13" width="506" height="24" forecolor="#006600" uuid="4a61852a-c45e-471b-8d66-622082197ab5"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{anamnese_id_ana}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="0" y="13" width="36" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="5322cf36-f07b-4e70-9ada-d7db54638b15"/>
+				</rectangle>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<group name="paciente_id_paciente">
+		<groupExpression><![CDATA[$F{paciente_id_paciente}]]></groupExpression>
+		<groupHeader>
+			<band height="30">
+				<textField>
+					<reportElement style="SubTitle" x="0" y="4" width="460" height="20" uuid="6bdbbcfe-ddb5-4e22-8a49-c6fa6d7cdb6b"/>
+					<textElement>
+						<font size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{paciente_id_paciente}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="paciente_nome">
+		<groupExpression><![CDATA[$F{paciente_nome}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="115" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="f44593ed-5ae0-4bb1-91b6-9afc2a0e5bb1"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="76548d87-dc64-437e-86fe-8ecd66ff0a78"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Anamnese]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="SubTitle" x="24" y="46" width="252" height="24" forecolor="#006600" uuid="d0f96287-44e3-483b-b7ab-23961755fb95"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paciente_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="SubTitle" x="59" y="85" width="145" height="15" uuid="cffabb61-08cd-4987-a150-71d6b2d3f121"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paciente_telefone}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="0" y="85" width="60" height="15" uuid="c5c53cc8-2f2a-4a7d-b857-195bd0869f68"/>
+				<text><![CDATA[Telefone:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="77a22a98-da4e-4769-a753-61c7cf7d7fc8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="12" height="15" uuid="39d5432e-81a0-4e53-bfad-7a86b37046bc"/>
+				<text><![CDATA[anamnese_motivo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="12" y="19" width="12" height="15" uuid="757922a5-5a4a-41ee-8dca-9f15886d2df5"/>
+				<text><![CDATA[anamnese_tempoSentada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="24" y="19" width="12" height="15" uuid="666fdfca-f206-4e9a-8f62-ff64e68512db"/>
+				<text><![CDATA[anamnese_antecendentesCirurgicos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="36" y="19" width="12" height="15" uuid="ec9e399e-fc57-473a-bd42-4f4be5128571"/>
+				<text><![CDATA[anamnese_tratamentoEstetico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="48" y="19" width="12" height="15" uuid="e767f31c-dc1f-4f9a-b101-b352abe0b0da"/>
+				<text><![CDATA[anamnese_antecedentesAlergicos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="60" y="19" width="12" height="15" uuid="9a67148e-483f-45df-8d23-a4c2f5e6e4e3"/>
+				<text><![CDATA[anamnese_funcionamentoIntestinalReg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="72" y="19" width="12" height="15" uuid="dc233f68-e3ca-4eca-9b95-d77f3177f9d9"/>
+				<text><![CDATA[anamnese_atividadeFisica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="84" y="19" width="12" height="15" uuid="4b094cd9-2b3a-402f-ac39-275b1abd8e92"/>
+				<text><![CDATA[anamnese_fumante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="96" y="19" width="12" height="15" uuid="81688f77-0c85-42e6-bb87-802f1add2b9a"/>
+				<text><![CDATA[anamnese_alimentacaoBalanceada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="108" y="19" width="12" height="15" uuid="88d43797-74d9-434d-a50f-20e23eba74db"/>
+				<text><![CDATA[anamnese_ingestaoLiquidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="120" y="19" width="12" height="15" uuid="7f8e4b73-af58-4f82-b6f5-6f591a5abe7b"/>
+				<text><![CDATA[anamnese_gestante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="132" y="19" width="12" height="15" uuid="f2c79e1e-a420-4288-85a1-c781a704447b"/>
+				<text><![CDATA[anamnese_filhos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="144" y="19" width="12" height="15" uuid="676e04ca-c294-41d2-b45c-36bf179cbf8e"/>
+				<text><![CDATA[anamnese_problemaOrtopedico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="156" y="19" width="12" height="15" uuid="bc340c0b-2e9a-47a3-9df8-d190324f10c1"/>
+				<text><![CDATA[anamnese_tratamentoMedico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="168" y="19" width="12" height="15" uuid="1f3f4c9f-80bb-45ae-afea-a20e593b1816"/>
+				<text><![CDATA[anamnese_acidosPele]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="180" y="19" width="12" height="15" uuid="cae6e5ac-5a0f-4d48-a318-58e978778378"/>
+				<text><![CDATA[anamnese_tratamentoOrtomolecular]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="192" y="19" width="12" height="15" uuid="37dd04bb-4eff-4648-bcab-9d119bcdea5c"/>
+				<text><![CDATA[anamnese_marcoPasso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="204" y="19" width="12" height="15" uuid="db9494d0-c6fb-46dd-9b2a-df721788e1c4"/>
+				<text><![CDATA[anamnese_metaisCorpo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="216" y="19" width="12" height="15" uuid="bf131cc0-fcf6-4777-bf58-4f14bfe28122"/>
+				<text><![CDATA[anamnese_antecedentesOncologicos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="228" y="19" width="12" height="15" uuid="16d021ca-9592-4e74-a260-e0a286e8a624"/>
+				<text><![CDATA[anamnese_cicloMenstrual]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="240" y="19" width="12" height="15" uuid="af4d34a4-ffd3-48f8-a889-3edf3ec4fce2"/>
+				<text><![CDATA[anamnese_metodoAnticoncepcional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="252" y="19" width="12" height="15" uuid="5d21ba6a-eb47-4480-96e5-e27f2a98db09"/>
+				<text><![CDATA[anamnese_varizes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="264" y="19" width="12" height="15" uuid="ef4abedf-85c5-4372-ae28-19364fe3d26f"/>
+				<text><![CDATA[anamnese_lesoes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="12" height="15" uuid="e140baab-c86f-45c4-aa17-4ed0c37a649b"/>
+				<text><![CDATA[anamnese_hipertensao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="288" y="19" width="12" height="15" uuid="a650f983-1d9b-46ab-9435-1c06d9694596"/>
+				<text><![CDATA[anamnese_hipotensao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="300" y="19" width="12" height="15" uuid="dbcf9c7f-f32e-4c5d-b016-b680a3ad8e9f"/>
+				<text><![CDATA[anamnese_epilepsia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="312" y="19" width="12" height="15" uuid="f3108ad4-c623-4c8a-924a-a73a7776d918"/>
+				<text><![CDATA[anamnese_diabetes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="324" y="19" width="12" height="15" uuid="ddfacfe6-7fa6-4c44-b28a-0ba09330ce18"/>
+				<text><![CDATA[anamnese_observacoes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="336" y="19" width="12" height="15" uuid="52b781fe-83d2-4ad7-99fe-ab2e78c9a91c"/>
+				<text><![CDATA[anamnese_paciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="348" y="19" width="12" height="15" uuid="761a36da-4f71-4468-9879-774aa4656c11"/>
+				<text><![CDATA[paciente_endereco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="360" y="19" width="12" height="15" uuid="70bd2da0-139c-4095-aab9-209c8a25e40c"/>
+				<text><![CDATA[paciente_bairro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="372" y="19" width="12" height="15" uuid="23f0b4a4-483b-4c00-a19f-9080c276d0f0"/>
+				<text><![CDATA[paciente_cidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="384" y="19" width="12" height="15" uuid="40f03ec9-8749-4e4d-a715-bd6972ae1380"/>
+				<text><![CDATA[paciente_cep]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="396" y="19" width="12" height="15" uuid="e99cc1b8-97a5-44ad-89a0-99183f4fe998"/>
+				<text><![CDATA[paciente_profissao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="408" y="19" width="12" height="15" uuid="08b3fab4-f17b-452c-b553-132436a42225"/>
+				<text><![CDATA[paciente_etnia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="420" y="19" width="12" height="15" uuid="12d76315-904a-44b4-bec1-384a6df8bf03"/>
+				<text><![CDATA[paciente_estadocivil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="432" y="19" width="12" height="15" uuid="6eece2d8-c7bb-4e67-8835-7e492c85ad7e"/>
+				<text><![CDATA[paciente_indicacao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="444" y="19" width="12" height="15" uuid="f98de74e-be11-4d9a-b941-89ca31c68808"/>
+				<text><![CDATA[paciente_convMedico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="456" y="19" width="12" height="15" uuid="1aa98545-420a-4cbf-80e1-7501578e9ff2"/>
+				<text><![CDATA[paciente_cart]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="468" y="19" width="12" height="15" uuid="56a6f029-37b7-48f6-be66-42f1357addc6"/>
+				<text><![CDATA[paciente_hospital]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="480" y="19" width="12" height="15" uuid="8443f4cc-5706-4ae3-af4a-448dc1d6c5e0"/>
+				<text><![CDATA[paciente_medico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="492" y="19" width="12" height="15" uuid="6636a536-8a52-4c7d-8f55-98a10ff0007b"/>
+				<text><![CDATA[paciente_telefone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="504" y="19" width="12" height="15" uuid="e8275206-1673-4551-9bbc-3cb74b078ced"/>
+				<text><![CDATA[paciente_email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="516" y="19" width="12" height="15" uuid="cd4f8c85-4874-4d79-87b6-ea7aa5955418"/>
+				<text><![CDATA[paciente_dataDeNascimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="528" y="19" width="12" height="15" uuid="074cb554-55f4-4e7d-aba5-def33b8a9643"/>
+				<text><![CDATA[paciente_sexo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="540" y="19" width="12" height="15" uuid="cb4c1f4f-d5f2-45f3-8446-55a20d7bc39d"/>
+				<text><![CDATA[paciente_motivo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="615262f5-0984-44ed-b734-d7b39de868dc"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="12" height="15" uuid="e6410104-bf35-4a9c-a523-d28fb2ea63fa"/>
+				<textFieldExpression><![CDATA[$F{anamnese_motivo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="12" y="0" width="12" height="15" uuid="a4dd919b-1c59-4e02-95f0-38c0428f5eef"/>
+				<textFieldExpression><![CDATA[$F{anamnese_tempoSentada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="24" y="0" width="12" height="15" uuid="d1205c0d-9c73-4757-9c8a-78d49afb31fa"/>
+				<textFieldExpression><![CDATA[$F{anamnese_antecendentesCirurgicos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="36" y="0" width="12" height="15" uuid="591c18f6-18b9-4d6b-81ed-5f23833ef35a"/>
+				<textFieldExpression><![CDATA[$F{anamnese_tratamentoEstetico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="48" y="0" width="12" height="15" uuid="35be3890-6db6-4c13-b62f-c321f89f8119"/>
+				<textFieldExpression><![CDATA[$F{anamnese_antecedentesAlergicos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="60" y="0" width="12" height="15" uuid="dd49d048-36b6-4c22-afca-033d82eef9b9"/>
+				<textFieldExpression><![CDATA[$F{anamnese_funcionamentoIntestinalReg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="72" y="0" width="12" height="15" uuid="3e5c97ae-148f-4f4e-ab0b-c5f40a11c54d"/>
+				<textFieldExpression><![CDATA[$F{anamnese_atividadeFisica}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="84" y="0" width="12" height="15" uuid="4282434e-a8b2-4e4a-a3b6-eaa8deac700d"/>
+				<textFieldExpression><![CDATA[$F{anamnese_fumante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="96" y="0" width="12" height="15" uuid="1b6ffde1-fbbe-4dc8-b488-6862b12a6996"/>
+				<textFieldExpression><![CDATA[$F{anamnese_alimentacaoBalanceada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="108" y="0" width="12" height="15" uuid="77b18ff2-e9c9-40de-a102-372bcbbd8e1d"/>
+				<textFieldExpression><![CDATA[$F{anamnese_ingestaoLiquidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="120" y="0" width="12" height="15" uuid="7a37468c-11ae-4ae6-a95d-e69e70689daf"/>
+				<textFieldExpression><![CDATA[$F{anamnese_gestante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="132" y="0" width="12" height="15" uuid="5cb42e39-6096-4d16-a0d6-5aff66bd7ef2"/>
+				<textFieldExpression><![CDATA[$F{anamnese_filhos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="144" y="0" width="12" height="15" uuid="dc260fa7-9c9b-459d-85d7-cc389937161d"/>
+				<textFieldExpression><![CDATA[$F{anamnese_problemaOrtopedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="156" y="0" width="12" height="15" uuid="8d3ae854-e089-4a46-a180-d1946fdb63ac"/>
+				<textFieldExpression><![CDATA[$F{anamnese_tratamentoMedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="168" y="0" width="12" height="15" uuid="a6ae3cbe-7c44-4eef-af15-4c77b228b790"/>
+				<textFieldExpression><![CDATA[$F{anamnese_acidosPele}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="180" y="0" width="12" height="15" uuid="b48d41ad-3fd2-48ca-81d8-8a7f50b92e26"/>
+				<textFieldExpression><![CDATA[$F{anamnese_tratamentoOrtomolecular}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="192" y="0" width="12" height="15" uuid="bb24f053-4e7d-4150-8da2-291b144f2526"/>
+				<textFieldExpression><![CDATA[$F{anamnese_marcoPasso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="204" y="0" width="12" height="15" uuid="f345b4c7-677b-4dc1-bf23-39e2ac9279e8"/>
+				<textFieldExpression><![CDATA[$F{anamnese_metaisCorpo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="216" y="0" width="12" height="15" uuid="9beb8efc-0cb4-434a-8a99-81db29e87770"/>
+				<textFieldExpression><![CDATA[$F{anamnese_antecedentesOncologicos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="228" y="0" width="12" height="15" uuid="49562092-5287-4c29-a3e5-148105513859"/>
+				<textFieldExpression><![CDATA[$F{anamnese_cicloMenstrual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="240" y="0" width="12" height="15" uuid="621c445d-28e1-4aad-8187-e8d5203b0f90"/>
+				<textFieldExpression><![CDATA[$F{anamnese_metodoAnticoncepcional}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="252" y="0" width="12" height="15" uuid="8996f756-5533-408b-97b7-d57d57022e73"/>
+				<textFieldExpression><![CDATA[$F{anamnese_varizes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="264" y="0" width="12" height="15" uuid="4ed7a9e7-2d04-4038-8bb5-8c35abbf6261"/>
+				<textFieldExpression><![CDATA[$F{anamnese_lesoes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="12" height="15" uuid="eb308153-7f12-4fa2-a816-6c1c8588b51b"/>
+				<textFieldExpression><![CDATA[$F{anamnese_hipertensao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="288" y="0" width="12" height="15" uuid="2cc08792-a4b2-492b-b1bf-85e3f13c8e55"/>
+				<textFieldExpression><![CDATA[$F{anamnese_hipotensao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="300" y="0" width="12" height="15" uuid="36010db3-acfe-414b-b8a4-5111d150d52d"/>
+				<textFieldExpression><![CDATA[$F{anamnese_epilepsia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="312" y="0" width="12" height="15" uuid="e57a17a2-6aa0-42d3-80f8-b81fe31467a3"/>
+				<textFieldExpression><![CDATA[$F{anamnese_diabetes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="324" y="0" width="12" height="15" uuid="82a5fdf6-3e2c-4b5a-9f87-f0a76f485a77"/>
+				<textFieldExpression><![CDATA[$F{anamnese_observacoes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="336" y="0" width="12" height="15" uuid="8c4983d7-18d8-4412-a148-e86c4b0140ae"/>
+				<textFieldExpression><![CDATA[$F{anamnese_paciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="348" y="0" width="12" height="15" uuid="3266b968-68ce-45e8-8ca1-df90eb6c50b9"/>
+				<textFieldExpression><![CDATA[$F{paciente_endereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="360" y="0" width="12" height="15" uuid="6f047d86-5218-43a4-8907-c1621a3450d4"/>
+				<textFieldExpression><![CDATA[$F{paciente_bairro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="372" y="0" width="12" height="15" uuid="18daaa32-1eef-4c2e-a84f-8372f4f90231"/>
+				<textFieldExpression><![CDATA[$F{paciente_cidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="384" y="0" width="12" height="15" uuid="d4823546-9359-4bbc-abe4-7aa8697f4f9d"/>
+				<textFieldExpression><![CDATA[$F{paciente_cep}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="396" y="0" width="12" height="15" uuid="e3ddb936-f69d-4d33-9893-32624a725f6b"/>
+				<textFieldExpression><![CDATA[$F{paciente_profissao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="408" y="0" width="12" height="15" uuid="d1f08abc-d8fa-4670-90c8-d5d11409f57d"/>
+				<textFieldExpression><![CDATA[$F{paciente_etnia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="420" y="0" width="12" height="15" uuid="e3f3b99f-ce04-4b90-a483-c79c67696071"/>
+				<textFieldExpression><![CDATA[$F{paciente_estadocivil}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="432" y="0" width="12" height="15" uuid="5d28366b-8e56-478b-92d9-e96b45eca5f7"/>
+				<textFieldExpression><![CDATA[$F{paciente_indicacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="444" y="0" width="12" height="15" uuid="589d84e1-4c3f-4b60-a6ac-3818839ead9c"/>
+				<textFieldExpression><![CDATA[$F{paciente_convMedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="456" y="0" width="12" height="15" uuid="0dfeac82-2f2a-4873-b333-99d2587f3f29"/>
+				<textFieldExpression><![CDATA[$F{paciente_cart}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="468" y="0" width="12" height="15" uuid="b6220afe-99d0-4785-9e81-9a8f0b1bbec5"/>
+				<textFieldExpression><![CDATA[$F{paciente_hospital}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="480" y="0" width="12" height="15" uuid="ad1ae753-8938-4e92-a742-bc87db995711"/>
+				<textFieldExpression><![CDATA[$F{paciente_medico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="492" y="0" width="12" height="15" uuid="b8745bed-8ef7-46f0-96c7-3d90235d0e86"/>
+				<textFieldExpression><![CDATA[$F{paciente_telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="504" y="0" width="12" height="15" uuid="bed660cc-d202-4044-90bf-44e8b1091dca"/>
+				<textFieldExpression><![CDATA[$F{paciente_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="516" y="0" width="12" height="15" uuid="372a0691-295b-4354-b1b1-cbefb5e87d06"/>
+				<textFieldExpression><![CDATA[$F{paciente_dataDeNascimento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="528" y="0" width="12" height="15" uuid="1182a440-e923-40c2-992c-0ffc28224475"/>
+				<textFieldExpression><![CDATA[$F{paciente_sexo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="540" y="0" width="12" height="15" uuid="d25ebc03-7d60-478b-a620-a09bd9c0c111"/>
+				<textFieldExpression><![CDATA[$F{paciente_motivo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="76d59760-5d7e-49f2-9acb-8a448894c64d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="SubTitle" x="192" y="4" width="174" height="22" uuid="adae153b-4548-4ab8-a349-1b91dbb1d5e0"/>
+				<text><![CDATA[Leaf Green SubTitle]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="a2509f38-4325-40b8-80e2-f1bb21b0161f"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="42da7865-24bb-421e-a298-07ad0b96b899"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="9c643fc7-11bc-43c0-bd69-540b59a1d239"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

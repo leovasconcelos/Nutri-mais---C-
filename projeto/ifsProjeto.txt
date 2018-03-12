@@ -1,0 +1,174 @@
+        if(radSegunda.isSelected() && lstRefeicoes.getSelectedValue().equals("Café da Manhã") )
+        {
+            txtDescricao.setText(pd2[0].getDado1()); 
+        }
+        if(radSegunda.isSelected() && lstRefeicoes.getSelectedValue().equals("Lanche da Manhã") )
+        {
+            txtDescricao.setText(pd2[0].getDado2()); 
+        }
+        if(radSegunda.isSelected() && lstRefeicoes.getSelectedValue().equals("Almoço") )
+        {
+            txtDescricao.setText(pd2[0].getDado3()); 
+        }
+        if(radSegunda.isSelected() && lstRefeicoes.getSelectedValue().equals("Lanche da Tarde") )
+        {
+            txtDescricao.setText(pd2[0].getDado4()); 
+        }
+        if(radSegunda.isSelected() && lstRefeicoes.getSelectedValue().equals("Jantar") )
+        {
+            txtDescricao.setText(pd2[0].getDado5()); 
+        }
+        if(radSegunda.isSelected() && lstRefeicoes.getSelectedValue().equals("Ceia") )
+        {
+            txtDescricao.setText(pd2[0].getDado6()); 
+        }
+        
+        if(radTerca.isSelected() && lstRefeicoes.getSelectedValue().equals("Café da Manhã") )
+        {
+            txtDescricao.setText(pd2[1].getDado1()); 
+        }
+        if(radTerca.isSelected() && lstRefeicoes.getSelectedValue().equals("Lanche da Manhã") )
+        {
+            txtDescricao.setText(pd2[1].getDado2()); 
+        }
+        if(radTerca.isSelected() && lstRefeicoes.getSelectedValue().equals("Almoço") )
+        {
+            txtDescricao.setText(pd2[1].getDado3()); 
+        }
+        if(radTerca.isSelected() && lstRefeicoes.getSelectedValue().equals("Lanche da Tarde") )
+        {
+            txtDescricao.setText(pd2[1].getDado4()); 
+        }
+        if(radTerca.isSelected() && lstRefeicoes.getSelectedValue().equals("Jantar") )
+        {
+            txtDescricao.setText(pd2[1].getDado5()); 
+        }
+        if(radTerca.isSelected() && lstRefeicoes.getSelectedValue().equals("Ceia") )
+        {
+            txtDescricao.setText(pd2[1].getDado6()); 
+        }
+        
+        if(radQuarta.isSelected() && lstRefeicoes.getSelectedValue().equals("Café da Manhã") )
+        {
+            txtDescricao.setText(pd2[2].getDado1()); 
+        }
+        if(radQuarta.isSelected() && lstRefeicoes.getSelectedValue().equals("Lanche da Manhã") )
+        {
+            txtDescricao.setText(pd2[2].getDado2()); 
+        }
+        if(radQuarta.isSelected() && lstRefeicoes.getSelectedValue().equals("Almoço") )
+        {
+            txtDescricao.setText(pd2[2].getDado3()); 
+        }
+        if(radQuarta.isSelected() && lstRefeicoes.getSelectedValue().equals("Lanche da Tarde") )
+        {
+            txtDescricao.setText(pd2[2].getDado4()); 
+        }
+        if(radQuarta.isSelected() && lstRefeicoes.getSelectedValue().equals("Jantar") )
+        {
+            txtDescricao.setText(pd2[2].getDado5()); 
+        }
+        if(radQuarta.isSelected() && lstRefeicoes.getSelectedValue().equals("Ceia") )
+        {
+            txtDescricao.setText(pd2[2].getDado6()); 
+        }
+        
+        if(radQuinta.isSelected() && lstRefeicoes.getSelectedValue().equals("Café da Manhã") )
+        {
+            txtDescricao.setText(pd2[3].getDado1()); 
+        }
+        if(radQuinta.isSelected() && lstRefeicoes.getSelectedValue().equals("Lanche da Manhã") )
+        {
+            txtDescricao.setText(pd2[3].getDado2()); 
+        }
+        if(radQuinta.isSelected() && lstRefeicoes.getSelectedValue().equals("Almoço") )
+        {
+            txtDescricao.setText(pd2[3].getDado3()); 
+        }
+        if(radQuinta.isSelected() && lstRefeicoes.getSelectedValue().equals("Lanche da Tarde") )
+        {
+            txtDescricao.setText(pd2[3].getDado4()); 
+        }
+        if(radQuinta.isSelected() && lstRefeicoes.getSelectedValue().equals("Jantar") )
+        {
+            txtDescricao.setText(pd2[3].getDado5()); 
+        }
+        if(radQuinta.isSelected() && lstRefeicoes.getSelectedValue().equals("Ceia") )
+        {
+            txtDescricao.setText(pd2[3].getDado6()); 
+        }
+        
+        if(radSexta.isSelected() && lstRefeicoes.getSelectedValue().equals("Café da Manhã") )
+        {
+            txtDescricao.setText(pd2[4].getDado1()); 
+        }
+        if(radSexta.isSelected() && lstRefeicoes.getSelectedValue().equals("Lanche da Manhã") )
+        {
+            txtDescricao.setText(pd2[4].getDado2()); 
+        }
+        if(radSexta.isSelected() && lstRefeicoes.getSelectedValue().equals("Almoço") )
+        {
+            txtDescricao.setText(pd2[4].getDado3()); 
+        }
+        if(radSexta.isSelected() && lstRefeicoes.getSelectedValue().equals("Lanche da Tarde") )
+        {
+            txtDescricao.setText(pd2[4].getDado4()); 
+        }
+        if(radSexta.isSelected() && lstRefeicoes.getSelectedValue().equals("Jantar") )
+        {
+            txtDescricao.setText(pd2[4].getDado5()); 
+        }
+        if(radSexta.isSelected() && lstRefeicoes.getSelectedValue().equals("Ceia") )
+        {
+            txtDescricao.setText(pd2[4].getDado6()); 
+        }
+        
+        if(radSabado.isSelected() && lstRefeicoes.getSelectedValue().equals("Café da Manhã") )
+        {
+            txtDescricao.setText(pd2[5].getDado1()); 
+        }
+        if(radSabado.isSelected() && lstRefeicoes.getSelectedValue().equals("Lanche da Manhã") )
+        {
+            txtDescricao.setText(pd2[5].getDado2()); 
+        }
+        if(radSabado.isSelected() && lstRefeicoes.getSelectedValue().equals("Almoço") )
+        {
+            txtDescricao.setText(pd2[5].getDado3()); 
+        }
+        if(radSabado.isSelected() && lstRefeicoes.getSelectedValue().equals("Lanche da Tarde") )
+        {
+            txtDescricao.setText(pd2[5].getDado4()); 
+        }
+        if(radSabado.isSelected() && lstRefeicoes.getSelectedValue().equals("Jantar") )
+        {
+            txtDescricao.setText(pd2[5].getDado5()); 
+        }
+        if(radSabado.isSelected() && lstRefeicoes.getSelectedValue().equals("Ceia") )
+        {
+            txtDescricao.setText(pd2[5].getDado6()); 
+        }
+        
+        if(radDomingo.isSelected() && lstRefeicoes.getSelectedValue().equals("Café da Manhã") )
+        {
+            txtDescricao.setText(pd2[6].getDado1()); 
+        }
+        if(radDomingo.isSelected() && lstRefeicoes.getSelectedValue().equals("Lanche da Manhã") )
+        {
+            txtDescricao.setText(pd2[6].getDado2()); 
+        }
+        if(radDomingo.isSelected() && lstRefeicoes.getSelectedValue().equals("Almoço") )
+        {
+            txtDescricao.setText(pd2[6].getDado3()); 
+        }
+        if(radDomingo.isSelected() && lstRefeicoes.getSelectedValue().equals("Lanche da Tarde") )
+        {
+            txtDescricao.setText(pd2[6].getDado4()); 
+        }
+        if(radDomingo.isSelected() && lstRefeicoes.getSelectedValue().equals("Jantar") )
+        {
+            txtDescricao.setText(pd2[6].getDado5()); 
+        }
+        if(radDomingo.isSelected() && lstRefeicoes.getSelectedValue().equals("Ceia") )
+        {
+            txtDescricao.setText(pd2[6].getDado6()); 
+        }
